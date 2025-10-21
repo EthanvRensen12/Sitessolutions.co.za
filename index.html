@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SiteSolutions | Power Your Digital Future</title>
+    <title>Sites Solutions | Power Your Digital Future</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         /* ==== GLOBAL STYLES ==== */
         :root {
             --primary: #6f00ff;       /* Electric purple */
-            --primary-glow: #9d4edd;   /* Lighter purple for glow */
+            --primary-glow: #9d4edd;  /* Lighter purple for glow */
             --secondary: #00d9ff;      /* Cyber blue */
             --accent: #ff0055;         /* Energetic pink */
             --dark: #0a0a18;           /* Deep navy */
@@ -138,6 +138,7 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
         }
 
+        /* FIX: Logo styling for the new anchor tag wrapper */
         .logo {
             font-size: 1.8rem;
             font-weight: 800;
@@ -147,6 +148,7 @@
             letter-spacing: 1px;
             display: flex;
             align-items: center;
+            text-decoration: none; /* Make the anchor tag look like the original text */
         }
 
         .logo-img {
@@ -154,9 +156,11 @@
             width: auto;
         }
 
+        /* FIX: Added align-items: center to ensure all nav items (including CTA) are vertically aligned */
         nav {
             display: flex;
             gap: 2.5rem;
+            align-items: center; 
         }
 
         nav a {
@@ -166,6 +170,10 @@
             transition: var(--transition);
             font-size: 1.1rem;
             position: relative;
+            /* FIX: Set display to inline-block/flex to ensure correct vertical alignment with CTA button */
+            display: inline-flex;
+            align-items: center;
+            height: 100%; /* Ensure link itself occupies full height for alignment */
         }
 
         nav a::after {
@@ -194,6 +202,10 @@
             color: white !important;
             font-weight: 600;
             box-shadow: 0 0 20px rgba(111, 0, 255, 0.3);
+            /* FIX: Ensure content is centered inside the button */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .nav-cta::after {
@@ -779,7 +791,8 @@
             appearance: none;
             -webkit-appearance: none;
             -moz-appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236f00ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            /* FIX: Changed stroke color to a light color for better visibility in the dropdown arrow */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f8f9ff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: right 1rem center;
             background-size: 16px;
@@ -876,7 +889,7 @@
         }
 
         .footer-brand {
-            grid-column: 1 / -1;
+            /* Removed grid-column: 1 / -1; to allow the footer links to wrap naturally on large screens */
             text-align: center;
         }
 
@@ -1293,22 +1306,16 @@
     </style>
 </head>
 <body>
-    <!-- Cyber Grid Background -->
     <div class="cyber-grid"></div>
     <div class="cyber-orbit"></div>
     <div class="cyber-orbit"></div>
     <div class="cyber-orbit"></div>
 
-    <!-- Main Content -->
     <div class="container">
         <header id="header">
-            <!-- Logo Placeholder - Replace with your logo -->
-            <div class="logo">
-                <!-- If you have a logo image, use this: -->
-                <!-- <img src="Logo Clear 2.png" alt="SiteSolutions" class="logo-img"> -->
-                <!-- If you prefer text logo, use this instead: -->
-                SiteSolutions
-            </div>
+            <a href="#home" class="logo">
+                Sites Solutions
+            </a>
             <nav id="nav">
                 <a href="#home">Home</a>
                 <a href="#phases">Our Approach</a>
@@ -1323,7 +1330,6 @@
             </button>
         </header>
 
-        <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content animate">
                 <span class="hero-badge">Join The Movement</span>
@@ -1353,18 +1359,16 @@
             </div>
         </section>
 
-        <!-- Phases Section -->
         <section id="phases" class="phases">
             <div class="section-header animate">
                 <h2>Our Strategic Approach</h2>
                 <p>We partner with you through every stage of your digital evolution</p>
             </div>
 
-            <!-- Phase 1 -->
             <div class="phase animate">
                 <div class="phase-content">
                     <div class="phase-icon"><i class="fas fa-layer-group"></i></div>
-                    <h3>Right Now — Building Your Digital Foundation</h3>
+                    <h3>Building Your Digital Foundation</h3>
                     <p>We build a powerful, conversion-focused foundation using advanced solutions designed for immediate impact and sustainable performance</p>
                     <div class="phase-features">
                         <div class="phase-feature">
@@ -1389,11 +1393,10 @@
                 </div>
             </div>
 
-            <!-- Phase 2 -->
             <div class="phase animate">
                 <div class="phase-content">
                     <div class="phase-icon"><i class="fas fa-server"></i></div>
-                    <h3>Coming Soon - IT Support</h3>
+                    <h3>IT Support</h3>
                     <p>We'll set you up with the right technology to prevent crashes and handle your company's growth</p>
                     <div class="phase-features">
                         <div class="phase-feature">
@@ -1418,11 +1421,10 @@
                 </div>
             </div>
 
-            <!-- Phase 3 -->
             <div class="phase animate">
                 <div class="phase-content">
                     <div class="phase-icon"><i class="fas fa-user-shield"></i></div>
-                    <h3>Coming Soon - Cyber Security</h3>
+                    <h3>Cyber Security</h3>
                     <p>We protect your business with advanced security and custom solutions. This keeps you ahead of the competition as technology changes.</p>
                     <div class="phase-features">
                         <div class="phase-feature">
@@ -1448,10 +1450,9 @@
             </div>
         </section>
 
-        <!-- Difference Section -->
         <section id="difference" class="difference">
             <div class="difference-content animate">
-                <h2>The SiteSolutions Difference</h2>
+                <h2>The Sites Solutions Difference</h2>
                 <p>Where others give you services, we give you growth, control, and peace of mind.</p>
                 
                 <div class="stats">
@@ -1479,14 +1480,13 @@
             </div>
         </section>
 
-        <!-- Vision Section -->
         <section id="vision" class="vision">
             <div class="vision-content animate">
                 <h2>Our Vision</h2>
                 <p>To be the trusted technology partner for businesses that want to grow - helping you build, scale, and secure your digital future.</p>
                 
                 <div class="vision-quote animate">
-                    "I've been working with SiteSolutions for a few months now, and the difference in our digital setup is night and day. Really impressed with how they understand our business needs."
+                    "I've been working with Sites Solutions for a few months now, and the difference in our digital setup is night and day. Really impressed with how they understand our business needs."
                     <cite>— Lauren Smith</cite>
                 </div>
                 
@@ -1494,7 +1494,6 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="contact-section">
             <div class="container">
                 <div class="contact-container">
@@ -1587,11 +1586,10 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
         <section class="cta">
             <div class="cta-content animate">
                 <h2>Power Your Digital Future Today</h2>
-                <p>Join hundreds of businesses that have transformed their digital presence with SiteSolutions</p>
+                <p>Join hundreds of businesses that have transformed their digital presence with Sites Solutions</p>
                 <a href="#contact" class="btn">Start Your Journey Now</a>
             </div>
         </section>
@@ -1601,7 +1599,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <div class="footer-logo">SiteSolutions</div>
+                    <div class="footer-logo">Sites Solutions</div>
                     <p class="footer-tagline">Power Your Digital Future - Where vision meets execution in the digital landscape.</p>
                 </div>
             </div>
@@ -1618,7 +1616,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
         // Header scroll effect
         const header = document.getElementById('header');
@@ -1647,7 +1644,7 @@
             });
         });
 
-        // Scroll animations
+        // Scroll animations and Stat Counter logic
         const animateElements = document.querySelectorAll('.animate');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -1655,11 +1652,13 @@
                     entry.target.classList.add('show');
                     
                     // Animate stats counting
-                    if (entry.target.classList.contains('stat')) {
+                    if (entry.target.classList.contains('stat') && !entry.target.hasAttribute('data-counted')) {
+                        entry.target.setAttribute('data-counted', 'true'); // Prevent recounting
                         const statNumber = entry.target.querySelector('h3');
                         const target = parseInt(statNumber.getAttribute('data-target'));
+                        const isPercentage = statNumber.getAttribute('data-target') === '99';
                         const duration = 2000; // 2 seconds
-                        const increment = target / (duration / 16); // 60fps
+                        const increment = target / (duration / 16); // ~60fps
                         let current = 0;
                         
                         const timer = setInterval(() => {
@@ -1668,7 +1667,8 @@
                                 clearInterval(timer);
                                 current = target;
                             }
-                            statNumber.textContent = Math.floor(current);
+                            // Display the number, add '%' for the Uptime stat
+                            statNumber.textContent = Math.floor(current) + (isPercentage ? '%' : '');
                         }, 16);
                     }
                 }
@@ -1712,7 +1712,8 @@
             });
             
             hexagon.addEventListener('mouseleave', () => {
-                hexagon.style.transform = 'scale(1) rotate(0deg)';
+                // Return to default appearance (the animation property handles the rotation)
+                hexagon.style.transform = 'scale(1)'; 
                 hexagon.style.background = 'linear-gradient(45deg, rgba(111, 0, 255, 0.1), rgba(0, 217, 255, 0.1))';
             });
         });
@@ -1739,25 +1740,24 @@
             const timelineSelect = document.getElementById('timeline');
             let isValid = true;
             
+            // Reset borders
+            nameInput.style.borderColor = 'rgba(111, 0, 255, 0.3)';
+            emailInput.style.borderColor = 'rgba(111, 0, 255, 0.3)';
+            timelineSelect.style.borderColor = 'rgba(111, 0, 255, 0.3)';
+            
             if (!nameInput.value.trim()) {
                 nameInput.style.borderColor = 'var(--accent)';
                 isValid = false;
-            } else {
-                nameInput.style.borderColor = 'rgba(111, 0, 255, 0.3)';
             }
             
             if (!emailInput.value.trim() || !emailInput.value.includes('@')) {
                 emailInput.style.borderColor = 'var(--accent)';
                 isValid = false;
-            } else {
-                emailInput.style.borderColor = 'rgba(111, 0, 255, 0.3)';
             }
             
             if (!timelineSelect.value) {
                 timelineSelect.style.borderColor = 'var(--accent)';
                 isValid = false;
-            } else {
-                timelineSelect.style.borderColor = 'rgba(111, 0, 255, 0.3)';
             }
             
             if (isValid) {
